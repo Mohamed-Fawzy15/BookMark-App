@@ -1,0 +1,78 @@
+body {
+  background-color: #f7ecde;
+}
+
+.bookmark-holder h1 {
+  font-weight: 500;
+  font-size: 3.125rem;
+  line-height: 60px;
+  color: rgb(53, 46, 40);
+  display: inline-block;
+  position: relative;
+  font-family: "Pacifico", cursive;
+}
+
+.bookmark-holder h1::before {
+  content: "";
+  background-color: #fec260;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  z-index: -1;
+  transition: 0.5s all ease-in-out;
+}
+
+.bookmark-holder h1:hover::before {
+  height: 50%;
+}
+
+.bookmark-inputs {
+  border-width: 2px 0px 2px 0px;
+  border-style: dotted;
+  border-color: #352e28;
+}
+
+.bookmark-haeder {
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Righteous", sans-serif;
+  font-size: 1.5625rem;
+  font-weight: 500;
+  line-height: 1.875rem;
+}
+
+.bookmark-label {
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.btn-submit {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #d1512d;
+  --bs-btn-border-color: #d1512d;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #bb4120;
+  --bs-btn-hover-border-color: #a03315;
+}
+
+.table-haeder {
+  font-family: "PT Sans Caption", sans-serif;
+  line-height: 1.5rem;
+  color: rgb(33, 37, 41);
+  font-weight: 700;
+}
+
+.btn-visit {
+  background-color: #8a9e23;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #d31220;
+  color: white;
+}

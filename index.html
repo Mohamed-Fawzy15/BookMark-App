@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <main>
+      <div
+        class="container bookmark-holder text-center d-flex justify-content-center align-items-center flex-column"
+      >
+        <h1 class="py-2">Bookmarker</h1>
+        <div
+          class="bookmark-inputs w-100 d-flex flex-column justify-content-center align-items-center gap-4 p-3 py-4 mt-5"
+        >
+          <!-- div header -->
+          <h2
+            class="d-flex align-items-center gap-3 bookmark-haeder justify-content-center"
+          >
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+
+          <!-- first input for bookmark name -->
+          <div class="d-flex flex-column justify-content-center w-100">
+            <label
+              for="bookmarkName"
+              class="d-flex pb-2 gap-2 fw-semibold align-items-center bookmark-label"
+            >
+              <i class="fa-solid fa-book-bookmark"></i>
+              <p class="mb-0">Site Name</p>
+            </label>
+            <input
+              type="text"
+              placeholder="Bookmark Name"
+              name="bookmarkName"
+              id="bookmarkName"
+              class="form-control"
+            />
+          </div>
+
+          <!-- second input for website url -->
+          <div class="d-flex flex-column justify-content-center w-100">
+            <label
+              for="websiteURL"
+              class="d-flex pb-2 gap-2 fw-semibold align-items-center bookmark-label"
+            >
+              <i class="fa-solid fa-link"></i>
+              <p class="mb-0">Site URL</p>
+            </label>
+            <input
+              type="text"
+              placeholder="Website URL"
+              name="websiteURL"
+              id="websiteURL"
+              class="form-control"
+            />
+          </div>
+
+          <button class="btn btn-submit px-5" onclick="pushData()">
+            Submit
+          </button>
+        </div>
+
+        <table class="table mt-4 text-center bg-light">
+          <thead>
+            <tr>
+              <td class="text-capitalize table-haeder">index</td>
+              <td class="text-capitalize table-haeder">website Name</td>
+              <td class="text-capitalize table-haeder">visit</td>
+              <td class="text-capitalize table-haeder">delete</td>
+            </tr>
+          </thead>
+          <tbody id="tableContent"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -60,7 +60,7 @@ body {
   --bs-btn-hover-border-color: #a03315;
 }
 
-.table-haeder {
+.table-header {
   font-family: "PT Sans Caption", sans-serif;
   line-height: 1.5rem;
   color: rgb(33, 37, 41);
@@ -68,11 +68,19 @@ body {
 }
 
 .btn-visit {
-  background-color: #8a9e23;
-  color: white;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #9eb23b;
+  --bs-btn-border-color: #9eb23b;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #8a9e23;
+  --bs-btn-hover-border-color: #6e8018;
 }
 
 .btn-delete {
-  background-color: #d31220;
-  color: white;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #eb1d36;
+  --bs-btn-border-color: #eb1d36;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d30820;
+  --bs-btn-hover-border-color: #ba081d;
 }

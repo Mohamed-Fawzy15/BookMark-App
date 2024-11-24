@@ -42,6 +42,7 @@
               <p class="mb-0">Site Name</p>
             </label>
             <input
+              oninput="validate(this)"
               type="text"
               placeholder="Bookmark Name"
               name="bookmarkName"
@@ -60,6 +61,7 @@
               <p class="mb-0">Site URL</p>
             </label>
             <input
+              oninput="validate(this)"
               type="text"
               placeholder="Website URL"
               name="websiteURL"
@@ -68,7 +70,12 @@
             />
           </div>
 
-          <button class="btn btn-submit px-5" onclick="pushData()">
+          <button
+            class="btn btn-submit px-5"
+            id="submitBtn"
+            disabled
+            onclick="pushData()"
+          >
             Submit
           </button>
         </div>
@@ -76,10 +83,10 @@
         <table class="table mt-4 text-center bg-light">
           <thead>
             <tr>
-              <td class="text-capitalize table-haeder">index</td>
-              <td class="text-capitalize table-haeder">website Name</td>
-              <td class="text-capitalize table-haeder">visit</td>
-              <td class="text-capitalize table-haeder">delete</td>
+              <td class="text-capitalize table-header">index</td>
+              <td class="text-capitalize table-header">website Name</td>
+              <td class="text-capitalize table-header">visit</td>
+              <td class="text-capitalize table-header">delete</td>
             </tr>
           </thead>
           <tbody id="tableContent"></tbody>

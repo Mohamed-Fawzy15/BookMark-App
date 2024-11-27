@@ -8,6 +8,8 @@ var submitBtn = document.getElementById("submitBtn");
 var visitBtn = document.getElementById("visitBtn");
 var deleteBtn = document.getElementById("deleteBtn");
 var tableBody = document.getElementById("tableContent");
+var layerElement = document.querySelector(".layer");
+var closeIcon = document.querySelector("#closeIcon");
 
 // to check if the localStorage have data or not and we can use it and display it
 if (localStorage.getItem("books") != null) {
@@ -33,6 +35,20 @@ function pushData() {
   clearInput();
 }
 
+// submit event if there is a duplicate or something wrong in the code
+submitBtn.addEventListener("click", () => {
+  if (!(inputs["bookmarkName"] && inputs["websiteURL"])) {
+    showLayer(); // Show warning if inputs are invalid
+    return;
+  }
+
+  if (isDuplicate(bookmarkNameInput.value)) {
+    showLayer(); // Show warning if the name is a duplicate
+    return;
+  }
+
+  pushData(); // Add the bookmark if everything is valid
+});
 // it display the data that the main array have in the html
 function displayTable(arr) {
   content = ``;
@@ -80,8 +96,30 @@ function visitSite(link) {
   window.location.href = link;
 }
 
-// validation
+// check if the user enter bookmark name that he write it before
+function isDuplicate(name) {
+  for (var i = 0; i < tableArr.length; i++) {
+    if (name === tableArr[i].name) {
+      return true; // Duplicate found
+    }
+  }
+  return false; // No duplicate found
+}
 
+// event to the submit button
+closeIcon.addEventListener("click", hideLayer);
+
+// a function will hide the warning i sent the user
+function hideLayer() {
+  layerElement.classList.replace("d-flex", "d-none");
+}
+
+// a function will show the warning if the user enter something wrong ot duplicate the value
+function showLayer() {
+  layerElement.classList.replace("d-none", "d-flex");
+}
+
+// validation
 var inputs = {
   bookmarkName: false,
   websiteURL: false,
@@ -116,6 +154,4 @@ function validate(element) {
     element.classList.add("is-invalid");
     element.classList.remove("is-valid");
   }
-
-  submitBtn.disabled = !(inputs["bookmarkName"] && inputs["websiteURL"]);
 }

@@ -84,3 +84,45 @@ body {
   --bs-btn-hover-bg: #d30820;
   --bs-btn-hover-border-color: #ba081d;
 }
+
+/* style for the custom alert */
+
+.warning {
+  width: 500px;
+}
+
+.circle span {
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 50%;
+}
+.circle span:nth-child(1) {
+  background-color: #f15f5d;
+}
+.circle span:nth-child(2) {
+  background-color: #febe2e;
+}
+
+.circle span:nth-child(3) {
+  background-color: #4db748;
+}
+
+.head-text {
+  font-family: "Bree Serif", serif;
+  font-size: 1.3125rem;
+  line-height: 1.6875rem;
+  color: rgb(53, 46, 40);
+}
+
+.warning-list li i {
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+}
+
+.warning-list li p {
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  color: rgb(33, 37, 41);
+  font-family: "PT Sans Caption", sans-serif;
+}
